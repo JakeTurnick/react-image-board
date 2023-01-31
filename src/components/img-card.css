@@ -1,0 +1,13 @@
+.img {
+    max-width: 95%;
+}
+
+li {
+    width: 50%;
+    background-color: aliceblue;
+    border: 2px solid black;
+    padding: 1%;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+
+}
