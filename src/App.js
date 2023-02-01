@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import ImgForm from "./components/img-form";
-import ImgCard from "./components/img-card";
+import ImgList from "./components/img-list";
 
 const INITIAL_IMGS = [
   {
@@ -18,11 +18,8 @@ const INITIAL_IMGS = [
 ];
 
 function App() {
+  //App state
   const [imgs, setImgs] = useState(INITIAL_IMGS);
-
-  const imgsHtml = imgs.map(img => (
-    <ImgCard key={img.id} imgSrc={img.url} imgName={img.name}/>
-  ))
 
   const addImg = (newImg) => {
     setImgs([...imgs, newImg])
@@ -31,15 +28,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ImgForm id="ImgForm" className="Img-Form" addImg={addImg}/>
+        {/* form is passed setImgs as prop */}
+        <ImgForm addImg={addImg}/>
       </header>
       <main>
-        <ul>
-          {imgsHtml}
-        </ul>
+        {/* list is passed img state */}
+        <ImgList img={imgs}/>
       </main>
     </div>
   );
-}
+};
 
 export default App;
