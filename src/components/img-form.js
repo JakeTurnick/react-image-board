@@ -29,24 +29,24 @@ function ImgForm(props) {
     }
 
   return (
-    <>
+    <section id="form-body">
         <p id="toggle"></p>
-        <form onSubmit={handleSubmit}>
-        <input
-            type="text"
-            placeholder="Image name or description"
-            name="name"
-            id="name"
-            value={name}
-            onChange={handleNameInput}
-            required
-        ></input>
+            <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                placeholder="Image name or description"
+                name="name"
+                id="name"
+                value={name}
+                onChange={handleNameInput}
+                required
+            ></input>
 
-        <input type="url" placeholder="Image URL" id="url" name="url" value={url} onChange={handleUrlInput} required></input>
-        <br />
-        <button type="submit" >Add new Image</button>
+            <input type="url" placeholder="Image URL" id="url" name="url" value={url} onChange={handleUrlInput} required></input>
+            <br />
+            <button type="submit" >Add new Image</button>
         </form>
-    </>
+    </section>
   );
 }
 

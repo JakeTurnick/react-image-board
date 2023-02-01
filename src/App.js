@@ -15,6 +15,11 @@ const INITIAL_IMGS = [
     name: "bird",
     url: "https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
+  {
+    id: 3,
+    name: "Peepy",
+    url: "https://cdn.shopify.com/s/files/1/2597/3774/products/itemlabel-cow-peepy-site-1.jpg?v=1620839788&width=1920",
+  },
 ];
 
 function App() {

@@ -5,3 +5,12 @@ input {
 button {
     width: 40%;
 }
+
+#form-body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
