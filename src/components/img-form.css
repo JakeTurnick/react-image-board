@@ -6,11 +6,13 @@ button {
     width: 40%;
 }
 
-#form-body {
-    margin: 0;
+#toggle {
+    width: 5%;
+    font-size: 1rem;
+    position: absolute;
+    top: 10%;
+    left: 0;
     padding: 0;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    margin: auto;
+    margin: 0;
+    margin-left: 10px;
 }

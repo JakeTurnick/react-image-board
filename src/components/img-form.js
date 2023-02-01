@@ -5,6 +5,7 @@ import { useState } from "react";
 function ImgForm(props) {
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
+    const [toggle, setToggle] = useState(true)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,26 +29,37 @@ function ImgForm(props) {
         url
     }
 
-  return (
-    <section id="form-body">
-        <p id="toggle"></p>
-            <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                placeholder="Image name or description"
-                name="name"
-                id="name"
-                value={name}
-                onChange={handleNameInput}
-                required
-            ></input>
+    const toggleForm = (e) => {
+        setToggle(!toggle);
+        // console.log('toggle', toggle)
+    }
 
-            <input type="url" placeholder="Image URL" id="url" name="url" value={url} onChange={handleUrlInput} required></input>
-            <br />
-            <button type="submit" >Add new Image</button>
-        </form>
-    </section>
-  );
+    return (
+        <>
+            <button id="toggle" onClick={toggleForm}>toggle form</button>
+            <form id="img-form" onSubmit={handleSubmit} style={{display: toggle ? 'block': 'none'}}>
+                <input
+                    type="text"
+                    placeholder="Image name or description"
+                    name="name"
+                    id="name"
+                    value={name}
+                    onChange={handleNameInput}
+                    required
+                ></input>
+                <input 
+                    type="url" 
+                    placeholder="Image URL" 
+                    id="url" 
+                    name="url" 
+                    value={url} 
+                    onChange={handleUrlInput} 
+                    required></input>
+                <br />
+                <button type="submit" >Add new Image</button>
+            </form>
+        </>
+    );
 }
 
 export default ImgForm;
