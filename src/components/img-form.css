@@ -7,12 +7,12 @@ button {
 }
 
 #toggle {
-    width: 5%;
+    width: fit-content;
     font-size: 1rem;
     position: absolute;
     top: 10%;
     left: 0;
-    padding: 0;
+    padding: .25rem;
     margin: 0;
     margin-left: 10px;
 }
